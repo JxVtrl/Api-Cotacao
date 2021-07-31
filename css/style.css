@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #272640;
+}
+
+main{
+    width: 500px;
+    height: 800px;
+    margin: 0 auto;
+    margin-top: 15px;
+    background: #0b525b;
+}
+
+header{
+    justify-content: space-around;
+    display: flex;
+    padding: 25px 0px;
+}
+
+#src-title{
+    text-align: center;
+}
+
+#list{
+    list-style: none;
+    height: 100%;
+    
+}
+
+#list li{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+}
+
+#list li div{
+    margin: 15px 10px;
+    
+}
+
+
+
+
