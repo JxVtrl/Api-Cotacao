@@ -10,70 +10,148 @@
 <body>
     <main>
         <header>
-            <div>Logo</div>
+            <div id="dataEHora">
+                <p id="hora"></p>
+                <p id="data"></p>
+            </div>
             <form action="">
-                <input type="text" id="">
-                <button>Enviar</button>
+                <input type="text" id="input">
+                <input id="botao" type="submit" >
             </form>
             <div>Menu</div>
         </header>
         <section>
-            <h2 id="src-title">Cotação atual</h2>
+            <div id="cotacao">
+            
+                <img alt="moeda" id="imagem">
+               <h2 id="moeda">Real Brasileiro</h2>
+            </div>
+            
             <ul id="list">
                 <li>
-                    <div>
-                        <h3>USD</h3>
-                        <p>DOLAR AMERICANO</p>
-                    </div>
-                </li>
-                
-                <li>
-                    <div>
-                        <h3>EUR</h3>
-                        <P>EURO</P>
-                    </div>
-                </li>
-
-                <li>
-                    <div>
+                    <div class="titulo">
                         <h3>ARS</h3>
                         <P>PESO ARGENTINO</P>
                     </div>
-                </li>
-
-                <li>
-                    <div>
-                        <h3>CAD</h3>
-                        <P>DOLAR CANADENSE</P>
+                    <div class="variado">
+                        <p id="ARS-BUY">2482,00</p>
+                        <h4>Compra</h4>
+                    </div>
+                    <div class="variado">
+                        <p id="ARS-SELL">2377,00</p>
+                        <h4>Venda</h4>
                     </div>
                 </li>
-
                 <li>
-                    <div>
+                    <div class="titulo">
                         <h3>AUD</h3>
                         <P>DOLAR AUSTRALIANO</P>
                     </div>
-                </li>
-
-                <li>
-                    <div>
-                        <h3>JPY</h3>
-                        <P>YEN JAPONÊS</P>
+                    <div class="variado">
+                        <p id="AUD-BUY">2482,00</p>
+                        <h4>Compra</h4>
+                    </div>
+                    <div class="variado">
+                        <p id="AUD-SELL">2377,00</p>
+                        <h4>Venda</h4>
                     </div>
                 </li>
-
                 <li>
-                    <div>
+                    <div class="titulo">
                         <h3>BTC</h3>
                         <P>BITCOIN</P>
                     </div>
-                    <div>
-                        <h4>Compra:</h4>
-                        <p>2482,00</p>
+                    <div class="variado">
+                        <p id="BTC-BUY">2482,00</p>
+                        <h4>Compra</h4>
                     </div>
-                    <div>
-                        <h4>Venda:</h4>
-                        <p>2377,00</p>
+                    <div class="variado">
+                        <p id="BTC-SELL">2377,00</p>
+                        <h4>Venda</h4>
+                    </div>
+                </li>
+                <li>
+                    <div class="titulo">
+                        <h3>CAD</h3>
+                        <P>DOLAR CANADENSE</P>
+                    </div>
+                    <div class="variado">
+                        <p id="CAD-BUY">2482,00</p>
+                        <h4>Compra</h4>
+                    </div>
+                    <div class="variado">
+                        <p id="CAD-SELL">2377,00</p>
+                        <h4>Venda</h4>
+                    </div>
+                </li>
+                <li>
+                    <div class="titulo">
+                        <h3>CNY</h3>
+                        <P>YUAN CHINÊS</P>
+                    </div>
+                    <div class="variado">
+                        <p id="CNY-BUY">2482,00</p>
+                        <h4>Compra</h4>
+                    </div>
+                    <div class="variado">
+                        <p id="CNY-SELL">2377,00</p>
+                        <h4>Venda</h4>
+                    </div>
+                </li>
+                <li>
+                    <div class="titulo">
+                        <h3>EUR</h3>
+                        <P>EURO</P>
+                    </div>
+                    <div class="variado">
+                        <p id="EUR-BUY">2482,00</p>
+                        <h4>Compra</h4>
+                    </div>
+                    <div class="variado">
+                        <p id="EUR-SELL">2377,00</p>
+                        <h4>Venda</h4>
+                    </div>
+                </li>
+                <li>
+                    <div class="titulo">
+                        <h3>GBP</h3>
+                        <P>LIBRA ESTERLINA</P>
+                    </div>
+                    <div class="variado">
+                        <p id="GBP-BUY">2482,00</p>
+                        <h4>Compra</h4>
+                    </div>
+                    <div class="variado">
+                        <p id="GBP-SELL">2377,00</p>
+                        <h4>Venda</h4>
+                    </div>
+                </li>
+                <li>
+                    <div class="titulo">
+                        <h3>JPY</h3>
+                        <P>YEN JAPONÊS</P>
+                    </div>
+                    <div class="variado">
+                        <p id="JPY-BUY">2482,00</p>
+                        <h4>Compra</h4>
+                    </div>
+                    <div class="variado">
+                        <p id="JPY-SELL">2377,00</p>
+                        <h4>Venda</h4>
+                    </div>
+                </li>
+                <li>
+                    <div class="titulo">
+                        <h3>USD</h3>
+                        <p>DOLAR AMERICANO</p>
+                    </div>
+                    <div class="variado">
+                        <p id="USD-BUY">2482,00</p>
+                        <h4>Compra</h4>
+                    </div>
+                    <div class="variado">
+                        <p id="USD-SELL">2377,00</p>
+                        <h4>Venda</h4>
                     </div>
                 </li>
             </ul>
