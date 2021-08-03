@@ -1,7 +1,6 @@
-
-// TEMPO DO USUARIO
+// CHAMADA FUNCAO AGORA
 setInterval(agora, 1000)
-
+// TEMPO DO USUARIO
 function agora(){
     let d = new Date()
 
@@ -28,42 +27,19 @@ function agora(){
     document.getElementById("data").innerHTML = date
 }
 
-
-
 // URL API
 const api_url = "https://api.hgbrasil.com/finance?format=json-cors&key=b00580e3"
 
 // CHAMADA DA API
 api(api_url)
-
 async function api(url){
-    const response = await fetch(url)
-    
-    let resposta = await response.json()
+    const response = await (await fetch(url)).json()
+    imprime(response)
+    variacao(response)
 
-    console.log(resposta.results.currencies)
-
-    let source = resposta.results.currencies.source
-    
+    let source = response.results.currencies.source
     imagem(source)
-
-
-    let ARS = resposta.results.currencies.ARS
-    let AUD = resposta.results.currencies.AUD
-    let BTC = resposta.results.currencies.BTC
-    let CAD = resposta.results.currencies.CAD
-    let CNY = resposta.results.currencies.CNY
-    let EUR = resposta.results.currencies.EUR
-    let GBP  = resposta.results.currencies.GBP
-    let JPY = resposta.results.currencies.JPY
-    let USD = resposta.results.currencies.USD
-
-    imprime(ARS, AUD, BTC, CAD, CNY, EUR, GBP, JPY, USD)
-
-    variacao(source)
-
 }
-
 
 // DEFINE IMAGEM DA MOEDA E NOME
 function imagem(src){
@@ -107,7 +83,17 @@ function imagem(src){
 }
 
 // IMPRIME OS VALORES NO HTML
-function imprime(ARS, AUD, BTC, CAD, CNY, EUR, GBP, JPY, USD){
+function imprime(src){
+    let ARS = src.results.currencies.ARS
+    let AUD = src.results.currencies.AUD
+    let BTC = src.results.currencies.BTC
+    let CAD = src.results.currencies.CAD
+    let CNY = src.results.currencies.CNY
+    let EUR = src.results.currencies.EUR
+    let GBP = src.results.currencies.GBP
+    let JPY = src.results.currencies.JPY
+    let USD = src.results.currencies.USD
+
     let ARS_buy = document.getElementById("ARS-BUY")
     ARS_buy.innerHTML = ARS.buy
     let ARS_sell = document.getElementById("ARS-SELL")
@@ -164,6 +150,7 @@ function imprime(ARS, AUD, BTC, CAD, CNY, EUR, GBP, JPY, USD){
     if(USD.sell == null){ USD_sell.innerHTML = USD_buy.innerHTML }
 }
 
+// AINDA SEM USO
 function variacao(src){
     
     let varUSD = src.results.currencies.USD.variation
