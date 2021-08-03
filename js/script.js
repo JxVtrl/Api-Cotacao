@@ -60,6 +60,8 @@ async function api(url){
 
     imprime(ARS, AUD, BTC, CAD, CNY, EUR, GBP, JPY, USD)
 
+    variacao(source)
+
 }
 
 
@@ -160,4 +162,16 @@ function imprime(ARS, AUD, BTC, CAD, CNY, EUR, GBP, JPY, USD){
     let USD_sell = document.getElementById("USD-SELL")
     USD_sell.innerHTML = USD.sell
     if(USD.sell == null){ USD_sell.innerHTML = USD_buy.innerHTML }
+}
+
+function variacao(src){
+    let varUSD = src.results.currencies.USD.variation
+    let varJPY = src.results.currencies.JPY.variation
+    let varEUR = src.results.currencies.EUR.variation
+    let varGBP = src.results.currencies.GBP.variation
+    let varARS = src.results.currencies.ARS.variation
+    let varAUD = src.results.currencies.AUD.variation
+    let varCAD = src.results.currencies.CAD.variation
+    let varBTC = src.results.currencies.BTC.variation
+    let varCNY = src.results.currencies.CNY.variation
 }
