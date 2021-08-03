@@ -31,7 +31,7 @@ function agora(){
 
 
 // URL API
-const api_url = "https://api.hgbrasil.com/finance?format=json-cors&key=78663b30"
+const api_url = "https://api.hgbrasil.com/finance?format=json-cors&key=b00580e3"
 
 // CHAMADA DA API
 api(api_url)
@@ -165,7 +165,10 @@ function imprime(ARS, AUD, BTC, CAD, CNY, EUR, GBP, JPY, USD){
 }
 
 function variacao(src){
+    
     let varUSD = src.results.currencies.USD.variation
+    
+
     let varJPY = src.results.currencies.JPY.variation
     let varEUR = src.results.currencies.EUR.variation
     let varGBP = src.results.currencies.GBP.variation
